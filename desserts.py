@@ -15,7 +15,7 @@ class Cupcake:
 
     def __repr__(self):
         """Human-readable printout for debugging."""
-
+        
         return f'<Cupcake name="{self.name}" qty={self.qty}>'
 
     def add_stock(self, amount):
