@@ -6,8 +6,6 @@ class Cupcake:
 
     cache = {}
 
-
-
     def __init__(self, name, flavor, price):
         self.name = name 
         self.flavor = flavor
