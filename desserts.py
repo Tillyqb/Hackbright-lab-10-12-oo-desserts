@@ -11,12 +11,11 @@ class Cupcake:
         self.flavor = flavor
         self.price = price
         self.qty = 0
-        self.cache[name] = self.__repr__()
-
+        self.cache[name] = self
     def __repr__(self):
         """Human-readable printout for debugging."""
-        
-        return f'<Cupcake name="{self.name}" qty={self.qty}>'
+
+        return f"<Cupcake name=\"{self.name}\" qty={self.qty}>"
 
     def add_stock(self, amount):
         self.qty += amount
@@ -25,7 +24,6 @@ class Cupcake:
         if self.qty == 0:
             print('Sorry, these cupcakes are sold out')
         elif self.qty - amount < 0:
-            #print(f'Sorry, there are only {self.qty} of {self.name} available.')
             self.qty = 0
         else:
             self.qty -= amount
